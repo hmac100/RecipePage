@@ -1,0 +1,189 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  color: hsl(24, 5%, 18%);
+  background-color: hsl(30, 54%, 90%);
+}
+
+.card {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 36%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2.2rem;
+  border-radius: 1rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+h1,
+h2 {
+  color: hsl(14, 45%, 36%);
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+h1 {
+  padding-top: 1rem;
+  color: hsl(24, 5%, 18%);
+  font-size: 36px;
+  line-height: 2rem;
+}
+h2 {
+  font-size: 28px;
+}
+p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+li span {
+  font-weight: 600;
+}
+h3,
+div,
+ul,
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter 0;
+  color: hsl(24, 5%, 18%);
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  line-height: 1.5rem;
+}
+
+.ingredients > ul > li {
+  margin-left: -1.5rem;
+}
+.instructions > ol > li {
+  margin-left: -1.5rem;
+}
+
+ul {
+  list-style: disc;
+  align-items: flex-start;
+}
+
+ul li::marker {
+  color: hsl(14, 45%, 36%);
+}
+
+ol li {
+  list-style-position: outside;
+  counter-increment: my-awesome-counter;
+  padding-left: 1rem;
+}
+
+ol li::marker {
+  content: counter(my-awesome-counter) ".";
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
+
+ul {
+  line-height: 2rem;
+}
+
+h3 {
+  color: hsl(324, 29%, 40%);
+  font-weight: 700;
+  padding-left: 28px;
+}
+.prep-time {
+  background-color: hsl(326, 100%, 98%);
+  border-radius: 3px;
+  padding: 10px;
+  padding-top: -0.5rem;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid hsl(24, 5%, 18%, 0.4);
+  margin: 1em 0;
+}
+ol li {
+  margin-bottom: 0.5rem;
+}
+
+h2 .ingredients .instructions > ol {
+  margin-left: -20px;
+}
+.nutrition {
+  margin-bottom: 2rem;
+}
+.nutrition div {
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 16rem;
+}
+.nutrition div span {
+  color: hsl(324, 29%, 40%);
+  font-weight: 700;
+  float: right;
+  justify-items: left;
+}
+
+.grid-container {
+  width: 90%;
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  padding: 0px 20px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid hsl(24, 5%, 18%, 0.4);
+  padding: 20px;
+  padding-left: 1rem;
+  font-size: 16px;
+  text-align: left;
+}
+
+.grid-item:nth-last-child(1) {
+  border-bottom: 0px;
+}
+.grid-item:nth-last-child(2) {
+  border-bottom: 0px;
+}
+.amount {
+  font-weight: 900;
+  color: darkgoldenrod;
+}
+.list {
+  margin-top: -50px;
+}
+@media screen and (max-width: 375px) {
+  body {
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  img {
+    border-radius: 0px;
+  }
+  div.card {
+    width: 100%;
+    padding: 0px;
+    gap: 2rem;
+  }
+  div.mob {
+    padding: 2rem 2em;
+  }
+  p {
+    padding-bottom: 1rem;
+  }
+  h1 {
+    margin-top: -3rem;
+  }
+}
